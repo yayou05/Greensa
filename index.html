@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>FoodFlix</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">Greensa</div>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Recettes</a>
+      <a href="#">Émissions</a>
+    </nav>
+    <div class="grow"></div>
+    <div class="search" role="search" aria-label="Recherche">
+      <input type="search" placeholder="Rechercher une recette, une émission...">
+      <div class="search-results" aria-label="Résultats de recherche"></div>
+    </div>
+    <div class="user">
+      <div>Bonjour<br><strong>Raïssa</strong></div>
+      <div class="avatar">RM</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-card sushi">
+        <div class="hero-content">
+          <span class="nouveau">NOUVEAU</span>
+          <h1 class="title">Les sushis maison</h1>
+          <p class="desc">Un atelier culinaire captivant...</p>
+          <div class="hero-actions">
+            <button class="btn play">► Regarder</button>
+            <button class="btn info"> Ma liste</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="populaire" data-type="movie" data-endpoint="popular">
+      <h3>Populaire sur FoodFlix</h3>
+      <div class="cards"></div>
+    </section>
+
+    <section class="populaire" data-type="movie" data-endpoint="top_rated">
+      <h3>Les mieux notés</h3>
+      <div class="cards"></div>
+    </section>
+
+    <section class="populaire" data-type="tv" data-endpoint="popular">
+      <h3>Séries populaires</h3>
+      <div class="cards"></div>
+    </section>
+
+    <section class="populaire" data-type="tv" data-endpoint="top_rated">
+      <h3>Séries les mieux notées</h3>
+      <div class="cards"></div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="modal-close">×</button>
+      <div id="modal-video"></div>
+      <div class="modal-info">
+        <h2 id="modal-title"></h2>
+        <p id="modal-overview"></p>
+        <div id="modal-meta"></div>
+        <div id="modal-episodes"></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FoodFlix — Inspiré par Netflix</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/api.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/sections.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
